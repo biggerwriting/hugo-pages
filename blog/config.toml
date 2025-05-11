@@ -1,7 +1,7 @@
-title = "Notre-Dame de Paris"
+title = "测试一下个人博客"
 baseURL = "https://biggerwriting.github.io/hugo-pages"
 languageCode = "en-us"
-theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
+theme = ["ananke"]
 resourceDir = "../resources"
 
 DefaultContentLanguage = "en"

@@ -16,3 +16,6 @@ url = '/test/'
 - 数据分析技能学习网站 DataCamp
 - 数据科学课程学习网站 Udemy
 - 生物统计学教授的博客 Simply Statistics
+
+## 拦路虎
+现在遇到的问题是：本地显示的格式是正常的，但是gitpage上显示的格式是不正常的。
