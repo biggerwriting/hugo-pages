@@ -1,3 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://tongqianwen.gitee.io/heart-chao/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
+theme = 'ananke'
