@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="记录都市打工人的养猫日常，分享猫咪护理经验、趣味瞬间与生活感悟">
+    <meta name="keywords" content="打工人养猫, 都市养猫, 猫咪日常, 宠物护理">
+    <title>喵星人日常 | 打工人的养猫日记</title>
+    <style>
+        /* 基础样式 */
+        :root {
+            --primary-color: #FFA726;  /* 活力橙色 */
+            --secondary-color: #4FC3F7; /* 清新蓝色 */
+            --text-color: #424242;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        /* 导航 */
+        nav {
+            background: white;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* 主要内容区域 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        /* 首屏区域 */
+        .hero {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: linear-gradient(45deg, #fff5f5, #f0fdff);
+        }
+
+        /* 时间轴布局 */
+        .timeline {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .timeline-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        /* 响应式图片 */
+        .responsive-img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        /* 页脚 */
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* 可替换为汉堡菜单 */
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .timeline-item {
+                padding: 1rem;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .timeline {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h1>🐾 喵星人日常</h1>
+            <div class="nav-links">
+                <a href="#home">首页</a>
+                <a href="#daily">每日记录</a>
+                <a href="#gallery">猫咪相册</a>
+                <a href="#contact">联系</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1>都市打工人的养猫日记</h1>
+        <p>记录与猫咪共同生活的温暖时光</p>
+    </section>
+
+    <main class="container">
+        <section id="daily">
+            <h2>今日猫事</h2>
+            <div class="timeline">
+                <!-- 时间轴内容 -->
+                <article class="timeline-item">
+                    <h3>⏰ 早晨7:00 早餐时间</h3>
+                    <img src="cat-breakfast.jpg" alt="猫咪享用早餐" class="responsive-img" loading="lazy">
+                    <p>准备优质猫粮+主食罐头，保证营养均衡...</p>
+                </article>
+                
+                <article class="timeline-item">
+                    <h3>💼 上班前的准备</h3>
+                    <img src="cat-toys.jpg" alt="猫咪玩具摆放" class="responsive-img" loading="lazy">
+                    <p>布置自动喂食器和智能摄像头，确保猫咪白天不寂寞...</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2>萌宠瞬间</h2>
+            <div class="photo-grid">
+                <!-- 图片网格布局 -->
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>交流养猫心得</h2>
+            <form>
+                <!-- 联系表单 -->
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 喵星人日常 - 记录与猫咪的美好时光</p>
+        <p>联系邮箱：meow@example.com</p>
+    </footer>
+</body>
+</html>
