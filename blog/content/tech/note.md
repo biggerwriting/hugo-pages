@@ -1,7 +1,7 @@
 +++
 date = '2025-05-07T22:45:06+08:00'
-draft = true
-title = 'Test'
+draft = false
+title = 'note'
 url = '/test/'
 +++
 子文件夹中的内容访问不到
