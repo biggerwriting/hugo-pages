@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音频播放优化</title>
+    <style>
+        /* 新增音频控件专用样式 */
+        audio {
+            width: 100%;
+            min-width: 300px;
+            max-width: 500px;
+            background: #fff;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* 覆盖浏览器默认样式 */
+        audio::-webkit-media-controls-panel {
+            background: linear-gradient(145deg, #FFB6C1, #98FB98);
+        }
+
+        audio::-webkit-media-controls-play-button {
+            background-color: #87CEFA;
+            border-radius: 50%;
+        }
+
+        audio::-webkit-media-controls-timeline {
+            background-color: #fff;
+            border-radius: 5px;
+            margin: 0 10px;
+        }
+
+        /* 移除卡片对音频的影响 */
+        .media-card {
+            background: transparent !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+        }
+    </style>
+</head>
+<body>
+    <section id="media">
+        <h2>多媒体空间</h2>
+        <div class="media-section">
+            <!-- 修改后的音频播放器 -->
+            <div class="media-card">
+                <audio controls>
+                    <source src="sample.mp3" type="audio/mpeg">
+                    您的浏览器不支持音频播放
+                </audio>
+            </div>
+            
+            <video controls class="card" width="400">
+                <source src="sample.mp4" type="video/mp4">
+                您的浏览器不支持视频播放
+            </video>
+        </div>
+    </section>
+</body>
+</html>

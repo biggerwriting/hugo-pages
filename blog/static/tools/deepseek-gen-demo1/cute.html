@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小可爱的科技博客</title>
+    <style>
+        :root {
+            --primary-color: #FFB6C1;  /* 浅粉色 */
+            --secondary-color: #87CEFA; /* 浅蓝色 */
+            --accent-color: #98FB98;   /* 薄荷绿 */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            line-height: 1.6;
+        }
+
+        /* 导航栏 */
+        nav {
+            background: white;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            background: var(--primary-color);
+            color: white;
+            border-radius: 20px;
+        }
+
+        /* 主要内容区域 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* 卡片式设计 */
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* 文章列表 */
+        .article-list {
+            display: grid;
+            grid-gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        /* 多媒体区域 */
+        .media-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        /* 页脚 */
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        /* 可爱元素 */
+        .heart {
+            color: var(--primary-color);
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">首页</a></li>
+            <li><a href="#articles">文章</a></li>
+            <li><a href="#tools">小工具</a></li>
+            <li><a href="#media">多媒体</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- 首页 -->
+        <section id="home">
+            <div class="card">
+                <h1>欢迎来到我的小站 <span class="heart">❤</span></h1>
+                <p>这里分享技术文章和有趣的小工具～</p>
+                <img src="https://via.placeholder.com/800x300" alt="banner" style="width:100%; border-radius:10px;">
+            </div>
+        </section>
+
+        <!-- 文章列表 -->
+        <section id="articles">
+            <h2>最新文章</h2>
+            <div class="article-list">
+                <div class="card">
+                    <h3>JavaScript小技巧</h3>
+                    <p>发布日期：2023-10-01</p>
+                    <p>分享一些实用的JS开发技巧...</p>
+                </div>
+                <!-- 更多文章 -->
+            </div>
+        </section>
+
+        <!-- 小工具 -->
+        <section id="tools">
+            <h2>我的小工具</h2>
+            <div class="article-list" id="tools-container"></div>
+        </section>
+
+        <!-- 多媒体 -->
+        <section id="media">
+            <h2>多媒体空间</h2>
+            <div class="media-section">
+                <audio controls class="card">
+                    <source src="sample.mp3" type="audio/mpeg">
+                    您的浏览器不支持音频播放
+                </audio>
+                <video controls class="card" width="400">
+                    <source src="sample.mp4" type="video/mp4">
+                    您的浏览器不支持视频播放
+                </video>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2023 小可爱的博客 <span class="heart">❤</span></p>
+    </footer>
+
+    <script>
+        // 动态加载小工具
+        const tools = [
+            {name: "计算器", description: "简易科学计算器", category: "工具类"},
+            {name: "天气查询", description: "实时天气查询工具", category: "生活类"},
+            {name: "代码编辑器", description: "在线代码编辑器", category: "开发类"}
+        ];
+
+        const toolsContainer = document.getElementById('tools-container');
+        
+        tools.forEach(tool => {
+            const toolElement = document.createElement('div');
+            toolElement.className = 'card';
+            toolElement.innerHTML = `
+                <h3>${tool.name}</h3>
+                <p>${tool.description}</p>
+                <small>分类：${tool.category}</small>
+            `;
+            toolsContainer.appendChild(toolElement);
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // 卡片点击效果
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('click', () => {
+                card.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    card.style.transform = '';
+                }, 200);
+            });
+        });
+    </script>
+</body>
+</html>
