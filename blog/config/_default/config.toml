@@ -2,3 +2,4 @@ baseURL = 'https://biggerwriting.github.io/hugo-pages/'
 languageCode = 'en-us'
 title = 'Blog under renovation'
 theme = 'ananke'
+enableGitInfo = true
