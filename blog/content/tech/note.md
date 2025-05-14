@@ -1,6 +1,6 @@
 +++
 date = '2025-05-07T22:45:06+08:00'
-draft = false
+draft = true
 title = 'note'
 url = '/test/'
 +++
